@@ -1,35 +1,45 @@
-// ================= IMAGE VIEWER =================
+// ================= IMAGE GALLERY =================
 
-const cards = document.querySelectorAll(".work-card");
+const galleryImages = document.querySelectorAll(
+  ".gallery-card img, .single-gallery img"
+);
+
 const modal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
-const closeButton = document.querySelector(".close");
+const closeButton = document.querySelector(".modal-close");
 
-cards.forEach(card => {
 
-  const image = card.querySelector("img");
+galleryImages.forEach((image) => {
 
-  card.addEventListener("click", () => {
+  image.addEventListener("click", () => {
 
-    modal.style.display = "flex";
     modalImage.src = image.src;
+
+    modal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
 
   });
 
 });
 
 
-closeButton.addEventListener("click", () => {
+function closeModal() {
 
-  modal.style.display = "none";
+  modal.classList.remove("show");
 
-});
+  document.body.style.overflow = "";
+
+}
+
+
+closeButton.addEventListener("click", closeModal);
 
 
 modal.addEventListener("click", (event) => {
 
   if (event.target === modal) {
-    modal.style.display = "none";
+    closeModal();
   }
 
 });
@@ -38,7 +48,27 @@ modal.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
 
   if (event.key === "Escape") {
-    modal.style.display = "none";
+    closeModal();
+  }
+
+});
+
+
+// ================= NAVBAR =================
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 50) {
+
+    navbar.style.boxShadow =
+      "0 8px 30px rgba(100,30,60,.08)";
+
+  } else {
+
+    navbar.style.boxShadow = "none";
+
   }
 
 });
