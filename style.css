@@ -96,76 +96,70 @@ body {
 }
 
 
-/* ================= COVER ================= */
+@media (max-width: 800px) {
 
-.cover-section {
-    min-height: 100vh;
-    padding: 100px 6% 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-        radial-gradient(circle at 10% 20%, #ffd9e8 0 8%, transparent 9%),
-        radial-gradient(circle at 90% 80%, #ffe4ef 0 10%, transparent 11%),
-        #fff7fa;
-}
+    .navbar {
+        padding: 0 20px;
+    }
 
-.cover-card {
-    width: min(1100px, 100%);
-    background: white;
-    border-radius: 30px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    box-shadow: 0 20px 60px rgba(180, 60, 110, 0.16);
-}
+    .nav-links {
+        display: none;
+    }
 
-.cover-image {
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-}
+    .cover-card {
+        grid-template-columns: 1fr;
+    }
 
-.cover-text {
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(145deg, #fff, #fff1f6);
-}
+    .cover-image-box {
+        height: auto;
+        max-height: 500px;
+    }
 
-.small-title {
-    color: #d6538b;
-    letter-spacing: 5px;
-    font-size: 15px;
-}
+    .cover-image {
+        height: auto;
+        max-height: 500px;
+    }
 
-.cover-text h1 {
-    color: #a92f66;
-    font-size: clamp(42px, 5vw, 65px);
-    line-height: 1.25;
-    margin: 18px 0;
-}
+    .cover-text {
+        padding: 35px;
+    }
 
-.cover-text p {
-    color: #765765;
-    font-size: 19px;
-}
+    .cover-text h1 {
+        font-size: 42px;
+    }
 
-.main-button {
-    width: fit-content;
-    margin-top: 30px;
-    padding: 12px 30px;
-    background: #d6538b;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-}
+    .cover-text p {
+        font-size: 20px;
+    }
 
-.main-button:hover {
-    background: #aa3268;
-    transform: translateY(-3px);
+    .contents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-layout,
+    .education-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery,
+    .certificate-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-item img {
+        height: 300px;
+    }
+
+    .scroll-buttons {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .scroll-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+    }
 }
 
 
