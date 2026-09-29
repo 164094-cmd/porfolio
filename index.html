@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -16,9 +17,12 @@
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-    <div class="nav-logo">THIRAPHAT</div>
+
+    <div class="nav-logo">
+        THIRAPHAT
+    </div>
 
     <div class="nav-links">
         <a href="#home">หน้าหลัก</a>
@@ -27,206 +31,136 @@
         <a href="#activities">กิจกรรม</a>
         <a href="#certificates">เกียรติบัตร</a>
     </div>
+
 </nav>
 
 
-/* ================= COVER ================= */
+<!-- ================= COVER ================= -->
+<section id="home" class="cover-section">
 
-.cover-section {
-    min-height: 100vh;
-    padding: 100px 6% 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    <div class="cover-card">
 
-    background:
-        radial-gradient(
-            circle at 10% 20%,
-            #ffd9e8 0 8%,
-            transparent 9%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            #ffe4ef 0 10%,
-            transparent 11%
-        ),
-        #fff7fa;
-}
+        <div class="cover-image-box">
+            <img src="Spu/1.png"
+                 alt="หน้าปก Portfolio นายธีรพัฒน์ ขวันวงค์"
+                 class="cover-image">
+        </div>
 
-.cover-card {
-    width: min(1100px, 100%);
-    background: white;
-    border-radius: 30px;
-    overflow: hidden;
+        <div class="cover-text">
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+            <span class="small-title">
+                PORTFOLIO
+            </span>
 
-    box-shadow:
-        0 20px 60px rgba(180, 60, 110, 0.16);
-}
+            <h1>
+                นายธีรพัฒน์<br>
+                ขวันวงค์
+            </h1>
 
-/* กล่องรูปหน้าปก */
-.cover-image-box {
-    width: 100%;
-    height: 650px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
+            <p>
+                แฟ้มสะสมผลงาน<br>
+                คณะบริหารธุรกิจ
+            </p>
 
-.cover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
+            <a href="#contents" class="main-button">
+                เข้าชม Portfolio
+            </a>
 
-/* กล่องข้อความ */
-.cover-text {
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(
-        145deg,
-        #ffffff,
-        #fff1f6
-    );
-}
+        </div>
 
-.small-title {
-    color: #d6538b;
-    letter-spacing: 5px;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.cover-text h1 {
-    color: #a92f66;
-    font-size: clamp(42px, 5vw, 65px);
-    line-height: 1.25;
-    margin: 18px 0;
-}
-
-.cover-text p {
-    color: #765765;
-    font-size: 22px;
-    line-height: 1.7;
-}
-
-/* ปุ่มเข้าชม Portfolio */
-.main-button {
-    width: fit-content;
-    margin-top: 38px;
-    padding: 12px 30px;
-
-    background: #d6538b;
-    color: white;
-
-    text-decoration: none;
-    border-radius: 30px;
-
-    transition: 0.3s;
-}
-
-.main-button:hover {
-    background: #aa3268;
-    transform: translateY(-3px);
-}
-
-/* ปุ่มเลื่อนขึ้น / ลง */
-.scroll-buttons {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    z-index: 999;
-}
-
-.scroll-btn {
-    width: 45px;
-    height: 45px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #d6538b;
-    color: white;
-
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 600;
-
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(180, 60, 110, 0.20);
-
-    transition: 0.3s;
-}
-
-.scroll-btn:hover {
-    background: #aa3268;
-    transform: translateY(-3px);
-}
-
-<!-- ================= CONTENTS ================= -->
-<section id="contents" class="section">
-    <div class="section-title">
-        <span>CONTENTS</span>
-        <h2>สารบัญ</h2>
     </div>
 
-    <div class="contents-grid">
+    <!-- ปุ่มเลื่อนขึ้น / ลง -->
+    <div class="scroll-buttons">
 
-        <a href="#reason" class="content-box">
+        <a href="#home"
+           class="scroll-btn"
+           title="เลื่อนขึ้น">
+            ↑
+        </a>
+
+        <a href="#contents"
+           class="scroll-btn"
+           title="เลื่อนลง">
+            ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTENTS ================= -->
+<section id="contents" class="contents-section">
+
+    <!-- รูปสารบัญด้านซ้าย -->
+    <div class="contents-image">
+
+        <img src="Spu/2.png"
+             alt="สารบัญ">
+
+    </div>
+
+
+    <!-- ปุ่มสารบัญด้านขวา -->
+    <div class="contents-menu">
+
+        <div class="contents-title">
+
+            <span>
+                CONTENTS
+            </span>
+
+            <h2>
+                สารบัญ
+            </h2>
+
+        </div>
+
+
+        <a href="#reason" class="contents-button">
             <b>01</b>
             <span>เหตุผลที่อยากเรียน</span>
         </a>
 
-        <a href="#profile" class="content-box">
+
+        <a href="#profile" class="contents-button">
             <b>02</b>
             <span>ข้อมูลส่วนตัว</span>
         </a>
 
-        <a href="#education" class="content-box">
+
+        <a href="#education" class="contents-button">
             <b>03</b>
             <span>ประวัติการศึกษา</span>
         </a>
 
-        <a href="#transcript" class="content-box">
+
+        <a href="#transcript" class="contents-button">
             <b>04</b>
             <span>ใบแสดงผลการเรียน</span>
         </a>
 
-        <a href="#activities" class="content-box">
+
+        <a href="#activities" class="contents-button">
             <b>05</b>
             <span>กิจกรรมที่เข้าร่วม</span>
         </a>
 
-        <a href="#certificates" class="content-box">
+
+        <a href="#certificates" class="contents-button">
             <b>06</b>
             <span>เกียรติบัตรและรางวัล</span>
         </a>
 
-        <a href="#thankyou" class="content-box">
+
+        <a href="#thankyou" class="contents-button">
             <b>07</b>
             <span>Thank You</span>
         </a>
 
     </div>
 
-    <!-- รูปสารบัญจริงจากพอร์ต -->
-    <div class="single-page">
-        <img src="Spu/2.png" alt="สารบัญ">
-    </div>
 </section>
 
 
@@ -234,14 +168,27 @@
 <section id="reason" class="section pink-section">
 
     <div class="section-title">
-        <span>MY MOTIVATION</span>
-        <h2>เหตุผลที่อยากเรียน</h2>
+
+        <span>
+            MY MOTIVATION
+        </span>
+
+        <h2>
+            เหตุผลที่อยากเรียน
+        </h2>
+
+        <p>
+            เหตุผลและแรงบันดาลใจในการเลือกศึกษาต่อ
+        </p>
+
     </div>
 
-    <div class="page-card">
+    <div class="single-page">
+
         <img src="Spu/3.png"
              alt="เหตุผลที่อยากเรียน"
              class="portfolio-page">
+
     </div>
 
 </section>
@@ -251,42 +198,92 @@
 <section id="profile" class="section">
 
     <div class="section-title">
-        <span>ABOUT ME</span>
-        <h2>ข้อมูลส่วนตัว</h2>
+
+        <span>
+            PROFILE
+        </span>
+
+        <h2>
+            ข้อมูลส่วนตัว
+        </h2>
+
     </div>
+
 
     <div class="profile-layout">
 
         <div class="profile-image">
+
             <img src="Spu/4.png"
-                 alt="ข้อมูลส่วนตัว นายธีรพัฒน์ ขวันวงค์">
+                 alt="ข้อมูลส่วนตัว">
+
         </div>
+
 
         <div class="profile-info">
 
             <div class="info-card">
-                <span>ชื่อ - นามสกุล</span>
-                <strong>นายธีรพัฒน์ ขวันวงค์</strong>
+
+                <span>
+                    ชื่อ - นามสกุล
+                </span>
+
+                <strong>
+                    นายธีรพัฒน์ ขวันวงค์
+                </strong>
+
             </div>
 
-            <div class="info-card">
-                <span>ชื่อเล่น</span>
-                <strong>เกรซ</strong>
-            </div>
 
             <div class="info-card">
-                <span>วันเกิด</span>
-                <strong>29 พฤศจิกายน พ.ศ. 2551</strong>
+
+                <span>
+                    ชื่อเล่น
+                </span>
+
+                <strong>
+                    เกรซ
+                </strong>
+
             </div>
 
-            <div class="info-card">
-                <span>แผนการเรียน</span>
-                <strong>คณิตศาสตร์ – อังกฤษ</strong>
-            </div>
 
             <div class="info-card">
-                <span>โรงเรียน</span>
-                <strong>โรงเรียนกระทุ่มแบน “วิเศษสมุทคุณ”</strong>
+
+                <span>
+                    วันเกิด
+                </span>
+
+                <strong>
+                    29 พฤศจิกายน พ.ศ. 2551
+                </strong>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>
+                    แผนการเรียน
+                </span>
+
+                <strong>
+                    คณิตศาสตร์ – อังกฤษ
+                </strong>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>
+                    โรงเรียน
+                </span>
+
+                <strong>
+                    โรงเรียนกระทุ่มแบน “วิเศษสมุทคุณ”
+                </strong>
+
             </div>
 
         </div>
@@ -300,31 +297,65 @@
 <section id="education" class="section pink-section">
 
     <div class="section-title">
-        <span>EDUCATION</span>
-        <h2>ประวัติการศึกษา</h2>
+
+        <span>
+            EDUCATION
+        </span>
+
+        <h2>
+            ประวัติการศึกษา
+        </h2>
+
     </div>
 
+
     <div class="education-layout">
+
+        <div class="education-image">
+
+            <img src="Spu/5.png"
+                 alt="ประวัติการศึกษา">
+
+        </div>
+
 
         <div class="education-text">
 
             <div class="school-card">
-                <span>โรงเรียน</span>
-                <h3>โรงเรียนกระทุ่มแบน “วิเศษสมุทคุณ”</h3>
-                <p>แผนการเรียน คณิตศาสตร์ – อังกฤษ</p>
+
+                <span>
+                    ระดับมัธยมศึกษา
+                </span>
+
+                <h3>
+                    โรงเรียนกระทุ่มแบน “วิเศษสมุทคุณ”
+                </h3>
+
+                <p>
+                    แผนการเรียนคณิตศาสตร์ – อังกฤษ
+                </p>
+
             </div>
+
 
             <div class="school-card target">
-                <span>เป้าหมายการศึกษาต่อ</span>
-                <h3>มหาวิทยาลัยศรีปทุม</h3>
-                <p>คณะบริหารธุรกิจ</p>
-                <p>สาขาบริหารและการจัดการสมัยใหม่</p>
+
+                <span>
+                    เป้าหมายการศึกษาต่อ
+                </span>
+
+                <h3>
+                    มหาวิทยาลัยศรีปทุม
+                </h3>
+
+                <p>
+                    คณะบริหารธุรกิจ
+                    <br>
+                    สาขาบริหารและการจัดการสมัยใหม่
+                </p>
+
             </div>
 
-        </div>
-
-        <div class="education-image">
-            <img src="Spu/5.png" alt="ประวัติการศึกษา">
         </div>
 
     </div>
@@ -336,14 +367,24 @@
 <section id="transcript" class="section">
 
     <div class="section-title">
-        <span>TRANSCRIPT</span>
-        <h2>ใบแสดงผลการเรียน</h2>
+
+        <span>
+            TRANSCRIPT
+        </span>
+
+        <h2>
+            ใบแสดงผลการเรียน
+        </h2>
+
     </div>
 
+
     <div class="single-page">
+
         <img src="Spu/6.png"
              alt="ใบแสดงผลการเรียน"
              class="portfolio-page">
+
     </div>
 
 </section>
@@ -353,46 +394,105 @@
 <section id="activities" class="section pink-section">
 
     <div class="section-title">
-        <span>ACTIVITIES</span>
-        <h2>กิจกรรมที่เข้าร่วม</h2>
-        <p>ประสบการณ์และกิจกรรมที่ได้เข้าร่วม</p>
+
+        <span>
+            ACTIVITIES
+        </span>
+
+        <h2>
+            กิจกรรมที่เข้าร่วม
+        </h2>
+
+        <p>
+            กิจกรรมและประสบการณ์ที่ได้เข้าร่วม
+        </p>
+
     </div>
+
 
     <div class="gallery">
 
         <div class="gallery-item">
-            <img src="Spu/7.png" alt="กิจกรรมที่ 1">
-            <div class="gallery-label">ACTIVITY 01</div>
+
+            <img src="Spu/7.png"
+                 alt="กิจกรรมที่เข้าร่วม 1">
+
+            <div class="gallery-label">
+                ACTIVITY 01
+            </div>
+
         </div>
 
-        <div class="gallery-item">
-            <img src="Spu/8.png" alt="กิจกรรมที่ 2">
-            <div class="gallery-label">ACTIVITY 02</div>
-        </div>
 
         <div class="gallery-item">
-            <img src="Spu/9.png" alt="กิจกรรมที่ 3">
-            <div class="gallery-label">ACTIVITY 03</div>
+
+            <img src="Spu/8.png"
+                 alt="กิจกรรมที่เข้าร่วม 2">
+
+            <div class="gallery-label">
+                ACTIVITY 02
+            </div>
+
         </div>
 
-        <div class="gallery-item">
-            <img src="Spu/10.png" alt="กิจกรรมที่ 4">
-            <div class="gallery-label">ACTIVITY 04</div>
-        </div>
 
         <div class="gallery-item">
-            <img src="Spu/11.png" alt="กิจกรรมที่ 5">
-            <div class="gallery-label">ACTIVITY 05</div>
+
+            <img src="Spu/9.png"
+                 alt="กิจกรรมที่เข้าร่วม 3">
+
+            <div class="gallery-label">
+                ACTIVITY 03
+            </div>
+
         </div>
 
-        <div class="gallery-item">
-            <img src="Spu/12.png" alt="กิจกรรมที่ 6">
-            <div class="gallery-label">ACTIVITY 06</div>
-        </div>
 
         <div class="gallery-item">
-            <img src="Spu/13.png" alt="กิจกรรมที่ 7">
-            <div class="gallery-label">ACTIVITY 07</div>
+
+            <img src="Spu/10.png"
+                 alt="กิจกรรมที่เข้าร่วม 4">
+
+            <div class="gallery-label">
+                ACTIVITY 04
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="Spu/11.png"
+                 alt="กิจกรรมที่เข้าร่วม 5">
+
+            <div class="gallery-label">
+                ACTIVITY 05
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="Spu/12.png"
+                 alt="กิจกรรมที่เข้าร่วม 6">
+
+            <div class="gallery-label">
+                ACTIVITY 06
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="Spu/13.png"
+                 alt="กิจกรรมที่เข้าร่วม 7">
+
+            <div class="gallery-label">
+                ACTIVITY 07
+            </div>
+
         </div>
 
     </div>
@@ -404,41 +504,93 @@
 <section id="certificates" class="section">
 
     <div class="section-title">
-        <span>ACHIEVEMENTS</span>
-        <h2>เกียรติบัตรและรางวัล</h2>
-        <p>ผลงานและความภาคภูมิใจ</p>
+
+        <span>
+            CERTIFICATES
+        </span>
+
+        <h2>
+            เกียรติบัตรและรางวัล
+        </h2>
+
+        <p>
+            ผลงานและความสำเร็จที่ได้รับ
+        </p>
+
     </div>
+
 
     <div class="gallery certificate-gallery">
 
         <div class="gallery-item">
-            <img src="Spu/14.png" alt="เกียรติบัตรและรางวัล 1">
-            <div class="gallery-label">CERTIFICATE 01</div>
+
+            <img src="Spu/14.png"
+                 alt="เกียรติบัตร 1">
+
+            <div class="gallery-label">
+                CERTIFICATE 01
+            </div>
+
         </div>
 
-        <div class="gallery-item">
-            <img src="Spu/15.png" alt="เกียรติบัตรและรางวัล 2">
-            <div class="gallery-label">CERTIFICATE 02</div>
-        </div>
 
         <div class="gallery-item">
-            <img src="Spu/16.png" alt="เกียรติบัตรและรางวัล 3">
-            <div class="gallery-label">CERTIFICATE 03</div>
+
+            <img src="Spu/15.png"
+                 alt="เกียรติบัตร 2">
+
+            <div class="gallery-label">
+                CERTIFICATE 02
+            </div>
+
         </div>
 
-        <div class="gallery-item">
-            <img src="Spu/17.png" alt="เกียรติบัตรและรางวัล 4">
-            <div class="gallery-label">CERTIFICATE 04</div>
-        </div>
 
         <div class="gallery-item">
-            <img src="Spu/18.png" alt="เกียรติบัตรและรางวัล 5">
-            <div class="gallery-label">CERTIFICATE 05</div>
+
+            <img src="Spu/16.png"
+                 alt="เกียรติบัตร 3">
+
+            <div class="gallery-label">
+                CERTIFICATE 03
+            </div>
+
         </div>
 
+
         <div class="gallery-item">
-            <img src="Spu/19.png" alt="เกียรติบัตรและรางวัล 6">
-            <div class="gallery-label">CERTIFICATE 06</div>
+
+            <img src="Spu/17.png"
+                 alt="เกียรติบัตร 4">
+
+            <div class="gallery-label">
+                CERTIFICATE 04
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="Spu/18.png"
+                 alt="เกียรติบัตร 5">
+
+            <div class="gallery-label">
+                CERTIFICATE 05
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="Spu/19.png"
+                 alt="เกียรติบัตร 6">
+
+            <div class="gallery-label">
+                CERTIFICATE 06
+            </div>
+
         </div>
 
     </div>
@@ -450,30 +602,36 @@
 <section id="thankyou" class="thankyou-section">
 
     <img src="Spu/20.png"
-         alt="ขอบคุณ"
+         alt="Thank You"
          class="thankyou-image">
-
-    <div class="thankyou-overlay">
-        <span>THANK YOU</span>
-        <h2>ขอบคุณที่รับชม</h2>
-        <p>Portfolio ของนายธีรพัฒน์ ขวันวงค์</p>
-    </div>
 
 </section>
 
 
-<!-- IMAGE MODAL -->
+<!-- ================= IMAGE MODAL ================= -->
 <div id="imageModal" class="modal">
-    <button class="close-modal">&times;</button>
-    <img id="modalImage" src="" alt="ภาพขนาดใหญ่">
+
+    <button class="close-modal">
+        &times;
+    </button>
+
+    <img id="modalImage"
+         src=""
+         alt="ขยายรูปภาพ">
+
 </div>
 
 
+<!-- ================= FOOTER ================= -->
 <footer>
-    <p>Portfolio | นายธีรพัฒน์ ขวันวงค์</p>
+
+    Portfolio | นายธีรพัฒน์ ขวันวงค์
+
 </footer>
+
 
 <script src="script.js"></script>
 
 </body>
 </html>
+```
