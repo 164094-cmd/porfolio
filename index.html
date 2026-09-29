@@ -30,32 +30,152 @@
 </nav>
 
 
-<!-- ================= COVER ================= -->
-<section id="home" class="cover-section">
-    <div class="cover-card">
+/* ================= COVER ================= */
 
-        <img src="Spu/1.png"
-             alt="หน้าปก Portfolio นายธีรพัฒน์ ขวันวงค์"
-             class="cover-image">
+.cover-section {
+    min-height: 100vh;
+    padding: 100px 6% 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-        <div class="cover-text">
-            <span class="small-title">PORTFOLIO</span>
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #ffd9e8 0 8%,
+            transparent 9%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #ffe4ef 0 10%,
+            transparent 11%
+        ),
+        #fff7fa;
+}
 
-            <h1>นายธีรพัฒน์<br>ขวันวงค์</h1>
+.cover-card {
+    width: min(1100px, 100%);
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
 
-            <p>
-                แฟ้มสะสมผลงาน<br>
-                คณะบริหารธุรกิจ
-            </p>
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-            <a href="#contents" class="main-button">
-                เข้าสู่ Portfolio
-            </a>
-        </div>
+    box-shadow:
+        0 20px 60px rgba(180, 60, 110, 0.16);
+}
 
-    </div>
-</section>
+/* กล่องรูปหน้าปก */
+.cover-image-box {
+    width: 100%;
+    height: 650px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* กล่องข้อความ */
+.cover-text {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #fff1f6
+    );
+}
+
+.small-title {
+    color: #d6538b;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.cover-text h1 {
+    color: #a92f66;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.25;
+    margin: 18px 0;
+}
+
+.cover-text p {
+    color: #765765;
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+/* ปุ่มเข้าชม Portfolio */
+.main-button {
+    width: fit-content;
+    margin-top: 38px;
+    padding: 12px 30px;
+
+    background: #d6538b;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #aa3268;
+    transform: translateY(-3px);
+}
+
+/* ปุ่มเลื่อนขึ้น / ลง */
+.scroll-buttons {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 999;
+}
+
+.scroll-btn {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d6538b;
+    color: white;
+
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(180, 60, 110, 0.20);
+
+    transition: 0.3s;
+}
+
+.scroll-btn:hover {
+    background: #aa3268;
+    transform: translateY(-3px);
+}
 
 <!-- ================= CONTENTS ================= -->
 <section id="contents" class="section">
