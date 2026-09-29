@@ -1,3 +1,4 @@
+```css
 * {
     margin: 0;
     padding: 0;
@@ -15,22 +16,30 @@ body {
     line-height: 1.7;
 }
 
+
 /* ================= NAVBAR ================= */
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 70px;
+
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 0 7%;
+
     z-index: 1000;
-    box-shadow: 0 3px 15px rgba(190, 70, 120, 0.08);
+
+    box-shadow:
+        0 3px 15px rgba(190, 70, 120, 0.08);
 }
 
 .nav-logo {
@@ -65,11 +74,12 @@ body {
 }
 
 .pink-section {
-    background: linear-gradient(
-        135deg,
-        #fff0f6,
-        #ffe2ed
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f6,
+            #ffe2ed
+        );
 }
 
 .section-title {
@@ -96,6 +106,647 @@ body {
 }
 
 
+/* ================= COVER ================= */
+
+.cover-section {
+    min-height: 100vh;
+
+    padding: 100px 6% 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #ffd9e8 0 8%,
+            transparent 9%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #ffe4ef 0 10%,
+            transparent 11%
+        ),
+        #fff7fa;
+}
+
+.cover-card {
+    width: min(1100px, 100%);
+
+    background: white;
+
+    border-radius: 30px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow:
+        0 20px 60px rgba(180, 60, 110, 0.16);
+}
+
+
+/* รูปหน้าปก */
+
+.cover-image-box {
+    width: 100%;
+    height: 650px;
+
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ข้อความหน้าปก */
+
+.cover-text {
+    padding: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff1f6
+        );
+}
+
+.small-title {
+    color: #d6538b;
+
+    letter-spacing: 5px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.cover-text h1 {
+    color: #a92f66;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    line-height: 1.25;
+
+    margin: 18px 0;
+}
+
+.cover-text p {
+    color: #765765;
+
+    font-size: 22px;
+
+    line-height: 1.7;
+}
+
+
+/* ปุ่มเข้าชม Portfolio */
+
+.main-button {
+    width: fit-content;
+
+    margin-top: 38px;
+
+    padding: 12px 30px;
+
+    background: #d6538b;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #aa3268;
+    transform: translateY(-3px);
+}
+
+
+/* ปุ่มเลื่อนขึ้น / ลง */
+
+.scroll-buttons {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    z-index: 999;
+}
+
+.scroll-btn {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d6538b;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 8px 20px rgba(180, 60, 110, 0.20);
+
+    transition: 0.3s;
+}
+
+.scroll-btn:hover {
+    background: #aa3268;
+    transform: translateY(-3px);
+}
+
+
+/* ================= CONTENTS ================= */
+
+.contents-section {
+    min-height: 100vh;
+
+    padding: 100px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(350px, 0.8fr);
+
+    gap: 60px;
+
+    align-items: center;
+
+    background: #fff8fb;
+}
+
+
+/* รูปสารบัญด้านซ้าย */
+
+.contents-image {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.contents-image img {
+    width: 100%;
+
+    max-width: 650px;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(180, 60, 110, 0.12);
+}
+
+
+/* เมนูสารบัญด้านขวา */
+
+.contents-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+    width: 100%;
+}
+
+.contents-title {
+    margin-bottom: 10px;
+}
+
+.contents-title span {
+    color: #d6538b;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+}
+
+.contents-title h2 {
+    color: #a92f66;
+
+    font-size: 38px;
+
+    margin-top: 2px;
+}
+
+
+/* ปุ่มแต่ละหน้า */
+
+.contents-button {
+    text-decoration: none;
+
+    background: white;
+
+    border: 1px solid #f2c9da;
+
+    border-radius: 15px;
+
+    padding: 14px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #492e3b;
+
+    box-shadow:
+        0 6px 18px rgba(180, 70, 120, 0.06);
+
+    transition: 0.3s;
+}
+
+.contents-button:hover {
+    transform: translateX(7px);
+
+    background: #fff0f6;
+
+    border-color: #d6538b;
+}
+
+.contents-button b {
+    color: #d6538b;
+
+    font-size: 19px;
+
+    min-width: 30px;
+}
+
+.contents-button span {
+    font-size: 16px;
+}
+
+
+/* ================= PAGE IMAGE ================= */
+
+.page-card {
+    max-width: 850px;
+    margin: auto;
+}
+
+.portfolio-page {
+    width: 100%;
+
+    max-width: 850px;
+
+    display: block;
+
+    margin: auto;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 40px rgba(150, 50, 100, 0.15);
+}
+
+.single-page {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* ================= PROFILE ================= */
+
+.profile-layout {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.profile-image img {
+    width: 100%;
+
+    border-radius: 25px;
+
+    display: block;
+
+    box-shadow:
+        0 15px 40px rgba(180, 60, 110, 0.15);
+}
+
+.profile-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.info-card {
+    background: white;
+
+    padding: 18px 22px;
+
+    border-radius: 16px;
+
+    border-left: 5px solid #d6538b;
+
+    box-shadow:
+        0 7px 20px rgba(180, 60, 110, 0.06);
+}
+
+.info-card span {
+    color: #c45482;
+
+    font-size: 14px;
+}
+
+.info-card strong {
+    color: #422b36;
+
+    font-size: 17px;
+}
+
+
+/* ================= EDUCATION ================= */
+
+.education-layout {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.education-image img {
+    width: 100%;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(180, 60, 110, 0.15);
+}
+
+.education-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.school-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    border-left: 6px solid #d6538b;
+
+    box-shadow:
+        0 8px 25px rgba(180, 60, 110, 0.07);
+}
+
+.school-card h3 {
+    color: #a92f66;
+
+    margin: 5px 0;
+}
+
+.school-card p {
+    color: #725d67;
+}
+
+.school-card span {
+    color: #d6538b;
+
+    font-size: 14px;
+}
+
+.school-card.target {
+    border-left-color: #ee87ae;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.gallery-item {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(180, 60, 110, 0.10);
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 35px rgba(180, 60, 110, 0.18);
+}
+
+.gallery-item img {
+    width: 100%;
+
+    height: 360px;
+
+    object-fit: contain;
+
+    display: block;
+
+    background: #fff8fb;
+
+    border-radius: 15px;
+}
+
+.gallery-label {
+    text-align: center;
+
+    padding: 12px 5px 8px;
+
+    color: #b83e73;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.certificate-gallery {
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+
+/* ================= THANK YOU ================= */
+
+.thankyou-section {
+    min-height: 100vh;
+
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #ffeaf2;
+}
+
+.thankyou-image {
+    width: 100%;
+
+    height: 100vh;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 2000;
+
+    inset: 0;
+
+    background:
+        rgba(30, 10, 20, 0.85);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal img {
+    max-width: 90%;
+
+    max-height: 90%;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+
+    right: 30px;
+    top: 20px;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #a92f66;
+
+    color: white;
+}
+
+
+/* ================= TABLET ================= */
+
 @media (max-width: 800px) {
 
     .navbar {
@@ -106,17 +757,22 @@ body {
         display: none;
     }
 
+
+    /* COVER */
+
     .cover-card {
         grid-template-columns: 1fr;
     }
 
     .cover-image-box {
         height: auto;
+
         max-height: 500px;
     }
 
     .cover-image {
         height: auto;
+
         max-height: 500px;
     }
 
@@ -132,373 +788,67 @@ body {
         font-size: 20px;
     }
 
-    .contents-grid {
+
+    /* CONTENTS */
+
+    .contents-section {
         grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 90px 5% 60px;
     }
+
+    .contents-image img {
+        max-width: 100%;
+    }
+
+    .contents-menu {
+        width: 100%;
+    }
+
+
+    /* PROFILE + EDUCATION */
 
     .profile-layout,
     .education-layout {
         grid-template-columns: 1fr;
     }
 
+
+    /* GALLERY */
+
     .gallery,
     .certificate-gallery {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .gallery-item img {
         height: 300px;
     }
 
+
+    /* SCROLL BUTTON */
+
     .scroll-buttons {
         right: 15px;
+
         bottom: 15px;
     }
 
     .scroll-btn {
         width: 40px;
+
         height: 40px;
+
         font-size: 21px;
     }
+
 }
 
 
-/* ================= CONTENTS ================= */
-
-.contents-grid {
-    max-width: 900px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    margin-bottom: 45px;
-}
-
-.content-box {
-    text-decoration: none;
-    background: white;
-    border: 1px solid #f6d1df;
-    border-radius: 18px;
-    padding: 20px 25px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: #492e3b;
-    transition: 0.3s;
-    box-shadow: 0 7px 20px rgba(180, 70, 120, 0.06);
-}
-
-.content-box:hover {
-    transform: translateY(-4px);
-    border-color: #e77da8;
-}
-
-.content-box b {
-    color: #d6538b;
-    font-size: 22px;
-}
-
-
-/* ================= PAGE IMAGE ================= */
-
-.single-page {
-    max-width: 850px;
-    margin: auto;
-    text-align: center;
-}
-
-.portfolio-page {
-    width: 100%;
-    max-width: 850px;
-    display: block;
-    margin: auto;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(150, 50, 100, 0.15);
-}
-
-.page-card {
-    max-width: 850px;
-    margin: auto;
-}
-
-
-/* ================= PROFILE ================= */
-
-.profile-layout {
-    max-width: 1050px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.profile-image img {
-    width: 100%;
-    border-radius: 25px;
-    display: block;
-    box-shadow: 0 15px 40px rgba(180, 60, 110, 0.15);
-}
-
-.profile-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.info-card {
-    background: white;
-    padding: 18px 22px;
-    border-radius: 16px;
-    border-left: 5px solid #d6538b;
-    box-shadow: 0 7px 20px rgba(180, 60, 110, 0.06);
-}
-
-.info-card span {
-    display: block;
-    color: #c45482;
-    font-size: 14px;
-}
-
-.info-card strong {
-    color: #422b36;
-    font-size: 17px;
-}
-
-
-/* ================= EDUCATION ================= */
-
-.education-layout {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.education-image img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(180, 60, 110, 0.15);
-}
-
-.education-text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.school-card {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    border-left: 6px solid #d6538b;
-    box-shadow: 0 8px 25px rgba(180, 60, 110, 0.07);
-}
-
-.school-card span {
-    color: #d6538b;
-    font-size: 14px;
-}
-
-.school-card h3 {
-    color: #a92f66;
-    margin: 5px 0;
-}
-
-.school-card p {
-    color: #725d67;
-}
-
-.school-card.target {
-    border-left-color: #ee87ae;
-}
-
-
-/* ================= GALLERY ================= */
-
-.gallery {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.gallery-item {
-    background: white;
-    border-radius: 20px;
-    padding: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(180, 60, 110, 0.10);
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.gallery-item:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 18px 35px rgba(180, 60, 110, 0.18);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 360px;
-    object-fit: contain;
-    display: block;
-    background: #fff8fb;
-    border-radius: 15px;
-}
-
-.gallery-label {
-    text-align: center;
-    padding: 12px 5px 8px;
-    color: #b83e73;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.certificate-gallery {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-
-/* ================= THANK YOU ================= */
-
-.thankyou-section {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: #ffeaf2;
-}
-
-.thankyou-image {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.thankyou-overlay {
-    position: absolute;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 35px 55px;
-    border-radius: 25px;
-    box-shadow: 0 15px 50px rgba(150, 50, 100, 0.15);
-}
-
-.thankyou-overlay span {
-    color: #d6538b;
-    font-size: 16px;
-    letter-spacing: 5px;
-}
-
-.thankyou-overlay h2 {
-    color: #a92f66;
-    font-size: 38px;
-}
-
-.thankyou-overlay p {
-    color: #715865;
-}
-
-
-/* ================= MODAL ================= */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    inset: 0;
-    background: rgba(30, 10, 20, 0.85);
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-}
-
-.modal.active {
-    display: flex;
-}
-
-.modal img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-.close-modal {
-    position: absolute;
-    right: 30px;
-    top: 20px;
-    border: none;
-    background: none;
-    color: white;
-    font-size: 45px;
-    cursor: pointer;
-}
-
-
-/* ================= FOOTER ================= */
-
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #a92f66;
-    color: white;
-}
-
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        padding: 0 20px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .cover-card {
-        grid-template-columns: 1fr;
-    }
-
-    .cover-image {
-        height: auto;
-        max-height: 500px;
-    }
-
-    .cover-text {
-        padding: 35px;
-    }
-
-    .cover-text h1 {
-        font-size: 42px;
-    }
-
-    .contents-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-layout,
-    .education-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery,
-    .certificate-gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .gallery-item img {
-        height: 300px;
-    }
-}
+/* ================= MOBILE ================= */
 
 @media (max-width: 520px) {
 
@@ -510,6 +860,20 @@ footer {
         font-size: 30px;
     }
 
+
+    .cover-text h1 {
+        font-size: 36px;
+    }
+
+    .cover-text p {
+        font-size: 18px;
+    }
+
+    .main-button {
+        margin-top: 30px;
+    }
+
+
     .gallery,
     .certificate-gallery {
         grid-template-columns: 1fr;
@@ -519,8 +883,5 @@ footer {
         height: auto;
     }
 
-    .thankyou-overlay {
-        width: 90%;
-        padding: 25px;
-    }
 }
+```
