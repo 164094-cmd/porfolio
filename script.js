@@ -1,74 +1,60 @@
-// ================= IMAGE GALLERY =================
-
-const galleryImages = document.querySelectorAll(
-  ".gallery-card img, .single-gallery img"
-);
+// ================= IMAGE MODAL =================
 
 const modal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
-const closeButton = document.querySelector(".modal-close");
+const closeModal = document.querySelector(".close-modal");
 
+const galleryImages = document.querySelectorAll(
+    ".gallery-item img, .portfolio-page, .profile-image img, .education-image img"
+);
 
 galleryImages.forEach((image) => {
 
-  image.addEventListener("click", () => {
+    image.addEventListener("click", () => {
 
-    modalImage.src = image.src;
+        modal.classList.add("active");
+        modalImage.src = image.src;
+        modalImage.alt = image.alt;
 
-    modal.classList.add("show");
-
-    document.body.style.overflow = "hidden";
-
-  });
+    });
 
 });
 
-
-function closeModal() {
-
-  modal.classList.remove("show");
-
-  document.body.style.overflow = "";
-
-}
-
-
-closeButton.addEventListener("click", closeModal);
-
+closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
 
 modal.addEventListener("click", (event) => {
 
-  if (event.target === modal) {
-    closeModal();
-  }
+    if (event.target === modal) {
+        modal.classList.remove("active");
+    }
 
 });
 
 
+// กด ESC เพื่อปิดรูป
 document.addEventListener("keydown", (event) => {
 
-  if (event.key === "Escape") {
-    closeModal();
-  }
+    if (event.key === "Escape") {
+        modal.classList.remove("active");
+    }
 
 });
 
 
-// ================= NAVBAR =================
-
-const navbar = document.querySelector(".navbar");
+// ================= NAVBAR SHADOW =================
 
 window.addEventListener("scroll", () => {
 
-  if (window.scrollY > 50) {
+    const navbar = document.querySelector(".navbar");
 
-    navbar.style.boxShadow =
-      "0 8px 30px rgba(100,30,60,.08)";
-
-  } else {
-
-    navbar.style.boxShadow = "none";
-
-  }
+    if (window.scrollY > 30) {
+        navbar.style.boxShadow =
+            "0 5px 20px rgba(180, 60, 110, 0.15)";
+    } else {
+        navbar.style.boxShadow =
+            "0 3px 15px rgba(190, 70, 120, 0.08)";
+    }
 
 });
