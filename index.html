@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Portfolio | Spu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">PORTFOLIO</div>
+
+    <nav>
+      <a href="#home">หน้าแรก</a>
+      <a href="#about">เกี่ยวกับ</a>
+      <a href="#portfolio">ผลงาน</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+  </header>
+
+
+  <!-- Home -->
+  <section id="home" class="hero">
+
+    <div class="hero-text">
+      <p class="small-title">WELCOME TO MY</p>
+
+      <h1>
+        PORTFOLIO
+      </h1>
+
+      <p class="description">
+        แฟ้มสะสมผลงาน กิจกรรม และความภาคภูมิใจ
+      </p>
+
+      <a href="#portfolio" class="main-button">
+        ดูผลงาน
+      </a>
+    </div>
+
+    <div class="hero-decoration">
+      <div class="circle"></div>
+      <div class="circle small"></div>
+    </div>
+
+  </section>
+
+
+  <!-- About -->
+  <section id="about" class="section about">
+
+    <div class="section-title">
+      <span>ABOUT ME</span>
+      <h2>เกี่ยวกับฉัน</h2>
+    </div>
+
+    <div class="about-box">
+
+      <div class="about-icon">
+        ✦
+      </div>
+
+      <div>
+        <h3>MY PORTFOLIO</h3>
+
+        <p>
+          เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมผลงาน กิจกรรม
+          ประสบการณ์ และเกียรติบัตรต่าง ๆ
+          เพื่อแสดงถึงความสามารถและความตั้งใจในการเรียนรู้
+        </p>
+
+        <p>
+          สามารถเลื่อนดูผลงานแต่ละส่วนได้จากเมนูด้านบน
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section portfolio">
+
+    <div class="section-title">
+      <span>MY WORKS</span>
+      <h2>ผลงานและกิจกรรม</h2>
+    </div>
+
+    <p class="section-description">
+      รวมภาพผลงานและเอกสารจากแฟ้มสะสมผลงาน
+    </p>
+
+
+    <div class="gallery">
+
+      <!-- 15 -->
+      <div class="work-card">
+        <img src="Spu/15.png" alt="ผลงาน 15">
+        <div class="work-info">
+          <span>01</span>
+          <h3>ผลงานและเกียรติบัตร</h3>
+        </div>
+      </div>
+
+
+      <!-- 16 -->
+      <div class="work-card">
+        <img src="Spu/16.png" alt="ผลงาน 16">
+        <div class="work-info">
+          <span>02</span>
+          <h3>ผลงานและกิจกรรม</h3>
+        </div>
+      </div>
+
+
+      <!-- 17 -->
+      <div class="work-card">
+        <img src="Spu/17.png" alt="ผลงาน 17">
+        <div class="work-info">
+          <span>03</span>
+          <h3>กิจกรรมและประสบการณ์</h3>
+        </div>
+      </div>
+
+
+      <!-- 18 -->
+      <div class="work-card">
+        <img src="Spu/18.png" alt="ผลงาน 18">
+        <div class="work-info">
+          <span>04</span>
+          <h3>กิจกรรมและผลงาน</h3>
+        </div>
+      </div>
+
+
+      <!-- 19 -->
+      <div class="work-card">
+        <img src="Spu/19.png" alt="ผลงาน 19">
+        <div class="work-info">
+          <span>05</span>
+          <h3>เกียรติบัตร</h3>
+        </div>
+      </div>
+
+
+      <!-- 20 -->
+      <div class="work-card">
+        <img src="Spu/20.png" alt="ผลงาน 20">
+        <div class="work-info">
+          <span>06</span>
+          <h3>หน้าปิดท้าย Portfolio</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+
+    <div class="section-title">
+      <span>CONTACT</span>
+      <h2>ติดต่อ</h2>
+    </div>
+
+    <div class="contact-box">
+
+      <h3>THANK YOU</h3>
+
+      <p>
+        ขอบคุณที่เข้าชมแฟ้มสะสมผลงาน
+      </p>
+
+      <a href="#home" class="back-button">
+        ↑ กลับด้านบน
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Portfolio | All Rights Reserved</p>
+  </footer>
+
+
+  <!-- Image Viewer -->
+  <div id="imageModal" class="modal">
+
+    <span class="close">&times;</span>
+
+    <img id="modalImage" class="modal-content">
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
