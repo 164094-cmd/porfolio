@@ -476,9 +476,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .cover-image {
-        height: auto;
-        max-height: 500px;
+   .cover-image {
+    height: auto;
+    max-height: none;
+}
     }
 
     .cover-text {
